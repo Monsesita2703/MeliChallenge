@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Mercado Libre</string>
+    <string name="str_title_search_screen">Buscar producto</string>
+    <string name="str_title_list_screen">Resultados de búsqueda</string>
+    <string name="str_title_welcome">¡Bienvenido!</string>
+    <string name="str_action_search">Buscar</string>
+    <string name="str_action_regresar">Realizar otra búsqueda</string>
+    <string name="str_msg_search">Escribe el producto que deseas buscar:</string>
+    <string name="str_hint_search">Buscar en Mercado Libre</string>
+    <string name="srt_msg_empty_field">Debes ingresar un producto.</string>
+    <string name="str_title_search_error">¡Ups! Hay un error con tu búsqueda</string>
+    <string name="str_msg_search_error">Lo sentimos, no hemos encontrado productos que coincidan
+        con tu búsqueda. Intenta con otro producto o verifica que lo hayas escrito correctamente.</string>
+    <string name="str_title_connectivity_error">¡Ups! Hay un error con tu conexión</string>
+    <string name="str_msg_connectivity_error">Verifica que tengas conexión a internet o intenta
+    cambiando de red.</string>
+    <string name="str_msg_error">Ha ocurrido un error inesperado, inténtalo más tarde.</string>
+    <string name="str_item_price">$ %.2f</string>
+    <string name="str_item_available_quantity">Quedan %d disponibles</string>
+    <string name="str_item_not_available_quantity">No disponible</string>
+    <string name="str_item_new">Nuevo</string>
+    <string name="str_item_not_new">Usado</string>
+    <string name="str_item_sold_quantity">Se han vendido %d unidades de este producto</string>
+    <string name="str_item_not_sold_quantity">Aún no se han vendido unidades de este producto</string>
+    <string name="str_item_accepts_mercado_pago">¡Puedes pagar con Mercado Pago!</string>
+    <string name="str_item_not_accepts_mercado_pago">Aún no se acepta Mercado Pago como método de pago</string>
+    <string name="str_item_warranty">Garantía: %s</string>
+    <string name="str_item_warranty_no_information">Sin información sobre garantía</string>
+    <string name="str_item_free_shipping">!Envío gratis!</string>
+    <string name="str_empty"></string>
+</resources>

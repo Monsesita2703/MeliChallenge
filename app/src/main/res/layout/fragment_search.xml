@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="searchViewModel"
+            type="com.example.melichallenge.ui.searchItem.SearchViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding_size"
+        tools:context=".ui.searchItem.SearchFragment" >
+
+        <TextView
+            android:id="@+id/tv_search_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_title_welcome"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_search_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="@string/str_msg_search"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            app:layout_constraintTop_toBottomOf="@id/tv_search_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/ll_search"
+            android:background="@drawable/search_layout_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_64"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_search_msg">
+
+            <EditText
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/btn_search"
+                android:drawableLeft="@android:drawable/ic_menu_search"
+                android:drawablePadding="8dp"
+                android:paddingLeft="4dp"
+                android:hint="@string/str_hint_search"
+                android:inputType="textAutoComplete"
+                android:text="@={searchViewModel.itemToSearch}"/>
+
+            <Button
+                android:id="@+id/btn_search"
+                android:background="@drawable/search_edittext_background"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="2dp"
+                android:text="@string/str_action_search"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_empty_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="@string/srt_msg_empty_field"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@color/design_default_color_error"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/ll_search"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/ll_connectivity_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_32"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/tv_empty_field"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/str_title_connectivity_error"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/str_msg_connectivity_error"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

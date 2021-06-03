@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="padding_size">16dp</dimen>
+    <dimen name="padding_item_right">6dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_32">32dp</dimen>
+    <dimen name="margin_64">64dp</dimen>
+</resources>
